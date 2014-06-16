@@ -1,0 +1,611 @@
+{% extends "base.html"%}
+
+{% block title%} Sale Property {% endblock %}
+
+{% block css %}    {% endblock %}
+
+
+
+
+
+{% block headerwrap %}
+	<div id="blue">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-8 col-lg-offset-2">
+				<h4>WE CAN DO A LOT OF THINGS</b></h4>
+				<p>JUST TAKE A LOOK & CONTACT US</p>
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- blue wrap -->
+{% endblock %}
+
+
+{% block page %}
+
+<div class="container w">
+    <div class="row centered">
+      <br><br>
+      <h3 class="text-left">Sale Property</h3>
+      <div class="col-lg-12">
+        
+		<form class="form-horizontal" role="form" method="post">
+			{% csrf_token %}
+
+		  <div class="form-group title">
+    		<label for="title" class="col-sm-2 control-label">Title : </label>
+    		<div class="col-sm-4">
+     		 <input type="text" name="title" class="form-control" id="inputPassword" placeholder="Title">
+    		</div>   
+  		  </div>
+
+		  <div class="form-group postfor">
+		    <label for="inputPassword3" class="col-sm-2 control-label">Post Property for : </label>
+		    <div class="col-sm-4">
+		      	<label class="checkbox-inline">
+      				<input type="radio" name="postfor" id="optionsRadios3" value="Sale" checked> Sale
+   				</label>
+   				<label class="checkbox-inline">
+      				<input type="radio" name="postfor" id="optionsRadios4" value="Rent"> Rent
+   				</label>
+		    </div>
+		  </div>
+
+		  <div class="form-group propertytype">
+		    <label for="inputEmail3" class="col-sm-2 control-label">Property Type : </label>
+		    <div class="col-sm-4">
+		      	<select name="propertytype" class="form-control" id="propertytype" >
+					<option value="" selected="selected">-----Select Property Type----</option>
+					<option value="Multistorey Apartment">Multistorey Apartment</option>
+					<option value="Builder Floor Apartment">Builder Floor Apartment</option>
+					<option value="Residential House">Residential House</option>
+					<option value="Villa">Villa</option>
+					<option value="Residential Plot">Residential Plot</option>
+					<option value="Penthouse">Penthouse</option>
+					<option value="Studio Apartment">Studio Apartment</option>
+					<option value="Service Apartment">Service Apartment</option>
+					<option value="Commercial Office Space">Commercial Office Space</option>
+					<option value="Office in IT Park/ SEZ">Office in IT Park/ SEZ</option>
+					<option value="Commercial Shop">Commercial Shop</option>
+					<option value="Space in Shopping Mall">Space in Shopping Mall</option>
+					<option value="Commercial Showroom">Commercial Showroom</option>
+					<option value="Kiosk">Kiosk</option>
+					<option value="Business Centre">Business Centre</option>
+					<option value="Commercial Land">Commercial Land</option>
+					<option value="Warehouse/ Godown">Warehouse/ Godown</option>
+					<option value="Guest House">Guest House</option>
+					<option value="Hotel">Hotel</option>
+					<option value="Hotel Sites">Hotel Sites</option>
+					<option value="Industrial Land">Industrial Land</option>
+					<option value="Industrial Building">Industrial Building</option>
+					<option value="Industrial Shed">Industrial Shed</option>
+					<option value="Agricultural Land">Agricultural Land</option>
+					<option value="Farm House">Farm House</option>
+
+				</select>
+		    </div>
+		  </div>
+
+
+		  <div class="form-group transationtype">
+		    <label for="inputPassword3" class="col-sm-2 control-label">Transaction Type : </label>
+		    <div class="col-sm-4">
+		      	<label class="checkbox-inline">
+      				<input type="radio" name="transationtype" id="optionsRadios3"  value="New Property" checked> New Property
+   				</label>
+   				<label class="checkbox-inline">
+      				<input type="radio" name="transationtype" id="optionsRadios4" value="Resale"> Resale
+   				</label>
+		    </div>
+		  </div>
+
+		  
+
+		  <div class="form-group city">
+		    <label for="inputEmail3" class="col-sm-2 control-label">City : </label>
+		    <div class="col-sm-4">
+		      	<select name="city" class="form-control" >
+		      		<option value="0" selected=""> ---select city--- </option>
+				  <option value="indore" >Indore</option>
+				</select>
+		    </div>
+		  </div>
+		  <div class="form-group locality">
+		    <label for="inputEmail3" class="col-sm-2 control-label">Locality : </label>
+		    <div class="col-sm-4">
+		      	<select name="locality" class="form-control" >
+		      	  <option value="" selected="selected">-----Select Locality----</option>
+				  <option value="A B Road">A B Road</option>
+				  <option value="Abhinandan Nagar">Abhinandan Nagar</option>
+				  <option value="AerodromeRoad">AerodromeRoad</option>
+				  <option value="Agarwal Nagar">Agarwal Nagar</option>
+				  <option value="Agrasen Nagar">Agrasen Nagar</option>
+				  <option value="Airport Road">Airport Road</option>
+				  <option value="Alok Nagar">Alok Nagar</option>
+				  <option value="Ambedkar Nagar">Ambedkar Nagar</option>
+				  <option value="Bengali Square">Bengali Square</option>
+				  <option value="Bhagirathpura">Bhagirathpura</option>
+				  <option value="Bhakt Prahlad Nagar">Bhakt Prahlad Nagar</option>
+				  <option value="Bhamoridubey">Bhamoridubey</option>
+				  <option value="Bhangarh">Bhangarh</option>
+				  <option value="Bhavani Pur Colony">Bhavani Pur Colony</option>
+				  <option value="Bicholi Mardana">Bicholi Mardana</option>
+				</select>
+		    </div>
+		  </div>
+		<div class="form-group nameofselecttype">
+    		<label for="inputPassword" class="col-sm-2 control-label">Name of Project/Society : </label>
+    		<div class="col-sm-4">
+     		 <input type="text" name="nameofselecttype" class="form-control" id="inputPassword" placeholder="Name of Project/Society">
+    		</div>   
+  		</div>
+
+  		<div class="form-group selecttype">
+		  	<label class="col-sm-2 control-label">Select Project/Society  : </label>
+		  	<div class="col-sm-4">
+		  		<label class="checkbox-inline">
+		  			<input type="radio" name="selecttype" value="Project" > Project
+		  		</label>
+		  		<label class="checkbox-inline">
+		  			<input type="radio" name="selecttype" value="Society" > Society
+		  		</label>
+		  	</div>
+		</div>
+
+		<div class="form-group bedrooms">
+		  	<label class="col-sm-2 control-label">Bedrooms : </label>
+		  	<div class="col-sm-4">
+		  		<select name="bedrooms" class="form-control">
+		  			<option value="0">--Bedrooms--</option>
+		  			<option value="1">1</option>
+		  			<option value="2">2</option>
+		  			<option value="3">3</option>
+		  			<option value="4">4</option>
+		  			<option value="5">5</option>
+		  			<option value="6">6</option>
+		  			<option value="7">7</option>
+		  			<option value="8">8</option>
+		  			<option value="9">9</option>
+		  			<option value="1">10</option>
+		  			<option value=">10">&gt; 10</option>
+		  		</select>
+		  	</div>
+		  </div>
+
+		  <div class="form-group bathrooms">
+		  	<label class="col-sm-2 control-label">Bathrooms : </label>
+		  	<div class="col-sm-4">
+		  		<select name="bathrooms" class="form-control">
+		  			<option value="0">--Bathrooms--</option>
+		  			<option value="1">1</option>
+		  			<option value="2">2</option>
+		  			<option value="3">3</option>
+		  			<option value="4">4</option>
+		  			<option value="5">5</option>
+		  			<option value="6">6</option>
+		  			<option value="7">7</option>
+		  			<option value="8">8</option>
+		  			<option value="9">9</option>
+		  			<option value="1">10</option>
+		  			<option value=">10">&gt; 10</option>
+		  		</select>
+		  	</div>
+		  </div>
+
+		  <div class="form-group furnished">
+		  	<label class="col-sm-2 control-label">Furnished : </label>
+		  	<div class="col-sm-4">
+		  		<select name="furnished" class="form-control">
+		  			<option value="0">--Furnish--</option>
+		  			<option value="Furnished">Furnished</option>
+		  			<option value="Unfurnished">Unfurnished</option>
+		  			<option value="Semi-Furnished">Semi-Furnished</option>
+		  		</select>
+		  	</div>
+		  </div>
+
+		  <div class="form-group coverdarea">
+		  	<label class="col-sm-2 control-label">Covered Area : </label>
+		  	<div class="col-sm-2">
+		  		<input class="form-control" name="coverdarea" >
+		  	</div>
+		  	<div class="col-sm-2">
+		  		<select name="coverdareaunit" class="form-control">
+		  			<option value="0">----Unit---</option>
+		  			<option value="Sq-ft" selected="selected">Sq-ft</option>
+		  			<option value="Sq-yrd">Sq-yrd</option>
+		  			<option value="Sq-m">Sq-m</option>
+		  			<option value="Acre">Acre</option>
+		  			<option value="Bigha">Bigha</option>
+		  			<option value="Hectare">Hectare</option>
+		  			<option value="Marla">Marla</option>
+		  			<option value="Kanal">Kanal</option>
+		  			<option value="Biswa1">Biswa1</option>
+		  			<option value="Biswa2">Biswa2</option>
+		  			<option value="Ground">Ground</option>
+		  			<option value="Aankadam">Aankadam</option>
+		  			<option value="Rood">Rood</option>
+		  			<option value="Chatak">Chatak</option>
+		  			<option value="Kottah">Kottah</option>
+		  			<option value="Marla">Marla</option>
+		  			<option value="Cent">Cent</option>
+		  			<option value="Perch">Perch</option>
+		  			<option value="Guntha">Guntha</option>
+		  			<option value="Are">Are</option>
+		  		</select>
+		  	</div>
+		  </div>
+
+		  <div class="form-group landarea">
+		  	<label class="col-sm-2 control-label">Plot/Land Area : </label>
+		  	<div class="col-sm-2">
+		  		<input class="form-control" name="landarea" >
+		  	</div>
+		  	<div class="col-sm-2">
+		  		<select name="landareaunit" class="form-control">
+		  			<option value="0">----Unit---</option>
+		  			<option value="Sq-ft" selected="selected">Sq-ft</option>
+		  			<option value="Sq-yrd">Sq-yrd</option>
+		  			<option value="Sq-m">Sq-m</option>
+		  			<option value="Acre">Acre</option>
+		  			<option value="Bigha">Bigha</option>
+		  			<option value="Hectare">Hectare</option>
+		  			<option value="Marla">Marla</option>
+		  			<option value="Kanal">Kanal</option>
+		  			<option value="Biswa1">Biswa1</option>
+		  			<option value="Biswa2">Biswa2</option>
+		  			<option value="Ground">Ground</option>
+		  			<option value="Aankadam">Aankadam</option>
+		  			<option value="Rood">Rood</option>
+		  			<option value="Chatak">Chatak</option>
+		  			<option value="Kottah">Kottah</option>
+		  			<option value="Marla">Marla</option>
+		  			<option value="Cent">Cent</option>
+		  			<option value="Perch">Perch</option>
+		  			<option value="Guntha">Guntha</option>
+		  			<option value="Are">Are</option>
+		  		</select>
+		  	</div>
+		  </div>
+
+		  <div class="form-group carpetarea">
+		  	<label class="col-sm-2 control-label">Carpet Area : </label>
+		  	<div class="col-sm-2">
+		  		<input class="form-control" name="carpetarea" >
+		  	</div>
+		  	<div class="col-sm-2">
+		  		<select name="carpetareaunit" class="form-control">
+		  			<option value="0">----Unit---</option>
+		  			<option value="Sq-ft" selected="selected">Sq-ft</option>
+		  			<option value="Sq-yrd">Sq-yrd</option>
+		  			<option value="Sq-m">Sq-m</option>
+		  			<option value="Acre">Acre</option>
+		  			<option value="Bigha">Bigha</option>
+		  			<option value="Hectare">Hectare</option>
+		  			<option value="Marla">Marla</option>
+		  			<option value="Kanal">Kanal</option>
+		  			<option value="Biswa1">Biswa1</option>
+		  			<option value="Biswa2">Biswa2</option>
+		  			<option value="Ground">Ground</option>
+		  			<option value="Aankadam">Aankadam</option>
+		  			<option value="Rood">Rood</option>
+		  			<option value="Chatak">Chatak</option>
+		  			<option value="Kottah">Kottah</option>
+		  			<option value="Marla">Marla</option>
+		  			<option value="Cent">Cent</option>
+		  			<option value="Perch">Perch</option>
+		  			<option value="Guntha">Guntha</option>
+		  			<option value="Are">Are</option>
+		  		</select>
+		  	</div>
+		  </div>
+
+		  <div class="form-group totalprice">
+		  	<label class="col-sm-2 control-lable"> Total Price  : </label>
+		  	<div class="col-sm-4">
+		  		<input type="text" name="totalprice" class="form-control" size="5">
+		  	</div>
+		  </div>
+
+		  <div class="form-group perunitprice">
+		  	<label class="col-sm-2 control-label">Per Unit Price : </label>
+		  	<div class="col-sm-2">
+		  		<input class="form-control" id="perunitprice" name="perunitprice" >
+		  	</div>
+		  	<div class="col-sm-2">
+		  		<select name="perunit" id="perunit" class="form-control">
+		  			<option value="0">----Unit---</option>
+		  			<option value="Sq-ft" selected="selected">Sq-ft</option>
+		  			<option value="Sq-yrd">Sq-yrd</option>
+		  			<option value="Sq-m">Sq-m</option>
+		  			<option value="Acre">Acre</option>
+		  			<option value="Bigha">Bigha</option>
+		  			<option value="Hectare">Hectare</option>
+		  			<option value="Marla">Marla</option>
+		  			<option value="Kanal">Kanal</option>
+		  			<option value="Biswa1">Biswa1</option>
+		  			<option value="Biswa2">Biswa2</option>
+		  			<option value="Ground">Ground</option>
+		  			<option value="Aankadam">Aankadam</option>
+		  			<option value="Rood">Rood</option>
+		  			<option value="Chatak">Chatak</option>
+		  			<option value="Kottah">Kottah</option>
+		  			<option value="Marla">Marla</option>
+		  			<option value="Cent">Cent</option>
+		  			<option value="Perch">Perch</option>
+		  			<option value="Guntha">Guntha</option>
+		  			<option value="Are">Are</option>
+		  		</select>
+		  	</div>
+		  </div>
+
+		  <div class="form-group is_showuser">
+		    <label for="inputPassword3" class="col-sm-2 control-label">Display Price to Users : </label>
+		    <div class="col-sm-4">
+		      	<label class="checkbox-inline">
+      				<input type="radio"  name="is_showuser" id="optionsRadios3" value="Yes" checked>Yes
+   				</label>
+
+   				<label class="checkbox-inline">
+      				<input type="radio" name="is_showuser" id="optionsRadios4" value="Ready to Move"> No
+   				</label>
+		    </div>
+		  </div>
+
+		  <div class="form-group floorno">
+		  	<label class="col-sm-2 control-label">Floor No. </label>
+		  	<div class="col-sm-4">
+		  		<select name="floorno" id="floorno" class="form-control">
+		  			<option value="0">---Floor Number---</option>
+		  			<option value="Lower Basement">Lower Basement</option>
+		  			<option value="Upper Basement">Upper Basement</option>
+		  			<option value="Ground">Ground</option>
+		  			<option value="1">1</option>
+		  			<option value="2">2</option>
+		  			<option value="3">3</option>
+		  			<option value="4">4</option>
+		  			<option value="5">5</option>
+		  			<option value="6">6</option>
+		  			<option value="7">7</option>
+		  			<option value="8">8</option>
+		  			<option value="9">9</option>
+		  			<option value="10">10</option>
+		  			<option value="11">11</option>
+		  			<option value="12">12</option>
+		  			<option value="13">13</option>
+		  			<option value="14">14</option>
+		  			<option value="15">15</option>
+		  		</select>
+		  	</div>
+		  </div>
+
+		  <div class="form-group totalfloors">
+		  	<label class="col-sm-2 control-lable"> Total Floors  : </label>
+		  	<div class="col-sm-4">
+		  		<input type="text" name="totalfloors" id="totalfloors" class="form-control" >
+		  	</div>
+		  </div>
+
+  		 <div class="form-group description">
+		    <label for="inputEmail3" class="col-sm-2 control-label">Description : </label>
+		    <div class="col-sm-4">
+		    <textarea id="textarea" class="form-control" name="description" rows="6" placeholder="Enter a short synopsis"></textarea>
+		    </div>
+		  </div>
+
+		  <div class="form-group possessionstatus">
+		    <label for="inputPassword3" class="col-sm-2 control-label">Possession Status : </label>
+		    <div class="col-sm-4">
+		      	<label class="checkbox-inline">
+      				<input type="radio"  name="possessionstatus" class="possession" value="Under Construction">Under Construction
+   				</label>
+
+   				<label class="checkbox-inline">
+      				<input type="radio" name="possessionstatus" class="possession" value="Ready to Move"> Ready to Move
+   				</label>
+		    </div>
+		    <br>
+		    <div class="form-group possessionstatusdate" style="clear:both;">
+		    	<label for="inputPassword3" class="col-sm-2 control-label"></label>
+		    	<div class="col-sm-4">
+					<div class="col-sm-6">
+						<label for="inputPassword3" class="control-label">Available From : </label>
+					</div>
+					<div class="col-sm-6">							
+						<input type="text" id="datepicker" name="possessiondate" class="form-control" disabled >							
+					</div>
+				</div>
+			</div>
+		    
+		  </div>
+
+
+
+		  <div class="form-group image">
+		    <label for="inputEmail3" class="col-sm-2 control-label">Image : </label>
+		    <div class="col-sm-4">
+		    <input type="file" name="image" class="form-control"  />
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-4">
+		    	<input type="hidden" id="modelsname" name="modelsname" value="">
+		      <button type="submit" class="btn btn-default">Save & Proceed</button>
+		    </div>
+		  </div>
+		</form>
+
+
+      </div><!-- col-lg-12 -->
+
+      
+    </div><!-- row -->
+    <br>
+    <br>
+  </div><!-- container -->
+
+
+{% endblock %}
+
+{% block footer_js %} 
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
+
+  });
+  </script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+    var allpropertytype = ['title', 'postfor', 'propertytype', 'transationtype', 'city', 'locality', 'nameofselecttype', 'selecttype', 'bedrooms', 'bathrooms', 'furnished', 'coverdarea', 'coverdareaunit', 'landarea', 'landareaunit',
+        'carpetarea', 'carpetareaunit', 'totalprice', 'perunitprice', 'perunit', 'is_showuser', 'floorno',
+        'totalfloors', 'possessionstatus', 'description', 'image'
+    ];
+
+    var propertytype = {
+        'Multistorey Apartment': [],
+        'Builder Floor Apartment': [],
+        'Residential House': ['floorno'],
+        'Villa': ['floorno'],
+        'Residential Plot': ['bedrooms', 'bathrooms', 'furnished', 'coverdarea', 'coverdareaunit', 'carpetarea', 'carpetareaunit', 'floorno', 'totalfloors', 'possessionstatus'],
+        'Penthouse': [],
+        'Studio Apartment': ['bedrooms'],
+        'Service Apartment': [],
+        'Commercial Office Space': ['bedrooms'],
+        'Office in IT Park/ SEZ': ['bedrooms'],
+        'Commercial Shop': ['bedrooms', 'bathrooms'],
+        'Space in Shopping Mall': ['bedrooms'],
+        'Commercial Showroom': ['bedrooms'],
+        'Kiosk': ['nameofselecttype', 'selecttype', 'bedrooms', 'bathrooms', 'landarea', 'landareaunit', 'floorno', 'totalfloors'],
+        'Business Centre': ['bedrooms', 'bathrooms', 'floorno'],
+        'Commercial Land': ['bedrooms', 'bathrooms', 'furnished', 'coverdarea', 'coverdareaunit', 'carpetarea', 'carpetareaunit', 'floorno', 'totalfloors', 'possessionstatus'],
+        'Warehouse/ Godown': ['nameofselecttype', 'selecttype', 'bedrooms', 'bathrooms', 'landarea', 'landareaunit'],
+        'Guest House': ['floorno'],
+        'Hotel': ['floorno'],
+        'Hotel Sites': ['bedrooms', 'bathrooms', 'furnished', 'coverdarea', 'coverdareaunit', 'carpetarea', 'carpetareaunit', 'floorno', 'totalfloors', 'possessionstatus'],
+        'Industrial Land': ['nameofselecttype', 'selecttype', 'bedrooms', 'bathrooms', 'furnished', 'coverdarea', 'coverdareaunit', 'carpetarea', 'carpetareaunit', 'floorno', 'totalfloors', 'possessionstatus'],
+        'Industrial Building': ['nameofselecttype', 'selecttype', 'bedrooms', 'bathrooms', 'furnished', 'floorno', 'possessionstatus'],
+        'Industrial Shed': ['nameofselecttype', 'selecttype', 'bedrooms', 'bathrooms', 'furnished', 'floorno', 'totalfloors', 'possessionstatus'],
+        'Agricultural Land': ['nameofselecttype', 'selecttype', 'bedrooms', 'bathrooms', 'furnished', 'coverdarea', 'coverdareaunit', 'carpetarea', 'carpetareaunit', 'floorno', 'totalfloors', 'possessionstatus'],
+        'Farm House': ['bedrooms', 'bathrooms', 'floorno']
+    };
+
+    var modelsname = {
+        'Multistorey Apartment': 'Apartment',
+        'Builder Floor Apartment': 'Apartment',
+        'Residential House': 'Apartment',
+        'Villa': 'Apartment',
+        'Residential Plot': 'LandProperty',
+        'Penthouse': 'Apartment',
+        'Studio Apartment': 'Apartment',
+        'Service Apartment': 'Apartment',
+        'Commercial Office Space': 'Apartment',
+        'Office in IT Park/ SEZ': 'Apartment',
+        'Commercial Shop': 'Apartment',
+        'Space in Shopping Mall': 'Apartment',
+        'Commercial Showroom': 'Apartment',
+        'Kiosk': 'Apartment',
+        'Business Centre': 'Apartment',
+        'Commercial Land': 'LandProperty',
+        'Warehouse/ Godown': 'Apartment',
+        'Guest House': 'Apartment',
+        'Hotel': 'Apartment',
+        'Hotel Sites': 'LandProperty',
+        'Industrial Land': 'LandProperty',
+        'Industrial Building': 'Apartment',
+        'Industrial Shed': 'LandProperty',
+        'Agricultural Land': 'LandProperty',
+        'Farm House': 'Apartment'
+    };
+
+
+
+
+    $("#propertytype").change(function () {
+
+        var selectvalue = $(this).val();
+        $("#modelsname").val(modelsname[selectvalue]);
+        console.log(propertytype[selectvalue]);
+
+
+        for (var i = 0; i < propertytype[selectvalue].length; i++) {
+            hidediv(propertytype[selectvalue][i]);
+            //document.getElementById(propertytype[selectvalue][i]).disabled = true;
+        }
+
+        for (var i = 0; i < allpropertytype.length; i++) {
+
+            if ($.inArray(allpropertytype[i], propertytype[selectvalue]) != -1) {
+                disabledelement(allpropertytype[i], true)
+            } else {
+                showdiv(allpropertytype[i])
+                disabledelement(allpropertytype[i], false)
+
+            }
+
+        }
+
+
+    });
+
+    $('.possession').click(function () {
+
+        if ($(this).val() == 'Ready to Move') {
+            $('#datepicker').prop('disabled', true)
+        }
+        if ($(this).val() == 'Under Construction') {
+            $('#datepicker').prop('disabled', false);
+        }
+
+    });
+
+
+    function disabledelement(cls, flag) {
+        console.log('this')
+        $('.' + cls).find('input').each(function (index, element) {
+            //console.log(element,index);
+            element.disabled = flag
+
+        });
+
+        $('.' + cls).find('textarea').each(function (index, element) {
+            //console.log(element,index);
+            element.disabled = flag
+
+        });
+
+        $('.' + cls).find('select').each(function (index, element) {
+            // console.log(element,index);
+            element.disabled = flag
+
+        });
+
+
+
+    }
+
+
+
+    function hidediv(id) {
+
+        $('.' + id).hide();
+
+    }
+
+    function showdiv(id) {
+
+        $('.' + id).show();
+    }
+
+
+});
+
+</script>
+
+
+{% endblock %}
