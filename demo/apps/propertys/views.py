@@ -22,14 +22,14 @@ def detailview(request, p_id):
 	propertytype = propertys.propertytype
 	propertysmodel = get_model('propertys', modelsname[propertytype])
 	propertysvalue = propertysmodel.objects.filter(propertyid=propertys)
-	
-
 	context = {'propertysvalue' : propertysvalue[0], 'modelsn' : modelsname[propertytype]}
 	return render(request, 'propertys/detailview.html', context)
 
 def viewproperty(request):
 	propertys = Property.objects.all()
-
+	if request.method == 'POST':
+		propertys = propertys.filter(propertytype=request.POST['propertytype'])
+	
 
 	#import pdb;pdb.set_trace()
 	context = {'propertys':propertys}
